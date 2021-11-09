@@ -34,7 +34,9 @@ namespace MethodParameters
             WelcomeUser(userName,userPin);
 
             //get value for question 4 and send it to the InchToCm method
-            
+
+            double inch = Convert.ToDouble(inchesInput.Text);
+            InchToCm(inch);
 
         }
 
@@ -118,12 +120,10 @@ namespace MethodParameters
         /// Input: 3.4
         /// 3.4 inches is 8.636 cms
 
-        public void InchToCm(double inches, double cm)
+        public void InchToCm(double inches)
         {
-            output = inches * 2.54
+            double cm = inches * 2.54;
             q4Output.Text = $"{inches} inches is {cm} cm";
         }
-
-
     }
 }
